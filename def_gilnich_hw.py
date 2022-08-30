@@ -53,3 +53,42 @@
 # b = average(arr)
 # print(arr)
 # print(b)
+
+def calculation():
+
+
+    choice = input("choice_command")
+    a = float(input("Enter: "))
+    b = float(input("Enter: "))
+
+    if choice == "+":
+        print("{} + {}" .format(a, b))
+        print(a + b)
+
+    elif choice == "-":
+        print("{} - {}" .format(a, b))
+        print(a - b)
+
+    elif choice == "*":
+        print("{} * {}" .format(a, b))
+        print(a * b)
+
+    elif choice == "/" and b !=0:
+        if b == 0:
+            print("{} / {}" .format(a, b))
+        print(a / b)
+    try:
+        res = a / b
+    except ZeroDivisionError:
+        res = 0
+    print(res)
+calculation()
+def again():
+    choice_again = input("choice_command")
+    if choice_again == "Y":
+        calculation()
+    elif choice_again == "N":
+        print("Exit")
+    else:
+        again()
+        calculation()
